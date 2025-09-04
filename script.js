@@ -1,9 +1,6 @@
-function toggleDarkMode() {
-  document.body.classList.toggle("dark");
-  const btn = document.querySelector(".toggle-btn");
-  if (document.body.classList.contains("dark")) {
-    btn.textContent = "☀️";
-  } else {
-    btn.textContent = "🌙";
-  }
+function abrirWhatsapp() {
+  const numero = "62985784962";
+  const url = `https://wa.me/${numero}`;
+  window.open(url, '_blank');
 }
+

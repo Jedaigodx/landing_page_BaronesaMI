@@ -1,46 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seu Estilo Íntimo</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Baronesa Moda Íntima</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header>
-    <button class="toggle-btn" onclick="toggleDarkMode()">🌙</button>
-    <h1>Seu Estilo Íntimo</h1>
-    <p>Conforto e estilo em roupas íntimas masculinas e femininas</p>
+  <header class="header">
+    <img src="imagens/BARONESA-LOGO01.png" alt="Logo Baronesa" class="logo" />
+    <span class="brand-name">Baronesa</span>
   </header>
 
-  <section class="produtos">
-    <div class="produto">
-      <img src="https://via.placeholder.com/300x200" alt="Cueca Boxer">
-      <h3>Cueca Boxer</h3>
-      <p>Conforto para o dia a dia</p>
+  <section class="hero">
+    <h1>Seu Estilo Íntimo</h1>
+    <p>Vestindo você com classe e conforto</p>
+    <button>Confira nossos produtos</button>
+  </section>
+
+  <section class="products">
+    <h2>Nossos Produtos</h2>
+    <p>Descubra peças que unem design, conforto e qualidade.</p>
+    <div class="filters">
+      <button class="active">Todos</button>
+      <button>Feminino</button>
+      <button>Masculino</button>
+      <button>Kits</button>
     </div>
-    <div class="produto">
-      <img src="https://via.placeholder.com/300x200" alt="Calcinha Renda">
-      <h3>Calcinha de Renda</h3>
-      <p>Sensualidade e delicadeza</p>
-    </div>
-    <div class="produto">
-      <img src="https://via.placeholder.com/300x200" alt="Kit Promoção">
-      <h3>Kit Promoção</h3>
-      <p>Mais peças por menos</p>
+    <div class="product-list">
+      <div class="product-item">
+        <img src="imagens/cuecas.jpeg" alt="Cueca Boxer" />
+        <h3>Cueca Boxer</h3>
+        <p>Conforto para o dia a dia</p>
+      </div>
+      <div class="product-item">
+        <img src="imagens/cuecas.jpeg" alt="Calcinha de Renda" />
+        <h3>Calcinha de Renda</h3>
+        <p>Sensualidade e delicadeza</p>
+      </div>
+      <div class="product-item">
+        <img src="imagens/cuecas.jpeg" alt="Kit Promoção 3 Peças" />
+        <h3>Kit Promoção 3 Peças</h3>
+        <p>Mais peças por menos</p>
+      </div>
     </div>
   </section>
 
-  <div class="botoes">
-    <a href="https://wa.me/55SEUNUMERO?text=Olá,+quero+ver+seu+catálogo!" target="_blank" class="btn">💬 Falar no WhatsApp</a>
-    <a href="https://instagram.com/SEUINSTAGRAM" target="_blank" class="btn btn-insta">📸 Ver no Instagram</a>
-  </div>
+  <section class="instagram">
+    <h2>Siga nossa inspiração</h2>
+    <p>Acompanhe nosso Instagram para novidades, looks e muito mais.</p>
+    <div class="insta-photos">
+      <!-- Aqui você pode adicionar as imagens do Instagram -->
+      <img src="imagens/cuecas.jpeg" alt="Instagram 1" />
+      <img src="imagens/cuecas.jpeg" alt="Instagram 2" />
+      <img src="imagens/cuecas.jpeg" alt="Instagram 3" />
+      <img src="imagens/cuecas.jpeg" alt="Instagram 4" />
+      <img src="imagens/cuecas.jpeg" alt="Instagram 5" />
+      <img src="imagens/cuecas.jpeg" alt="Instagram 6" />
+    </div>
+    <button>Ver no Instagram</button>
+  </section>
 
-  <footer>
-    <p>© 2025 Baronesa Moda Íntima - Todos os direitos reservados</p>
+  <section class="contact">
+    <h2>Fale Conosco</h2>
+    <p>Tem alguma dúvida ou quer fazer um pedido? Estamos à disposição!</p>
+    <button onclick="abrirWhatsapp()">Falar no WhatsApp</button>
+  </section>
+
+  <footer class="footer">
+    <img src="imagens/BARONESA-LOGO01.png" alt="Logo Baronesa" class="logo-footer" />
+    <p>© 2025 Baronesa Moda Íntima <br /> Todos os direitos reservados</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>

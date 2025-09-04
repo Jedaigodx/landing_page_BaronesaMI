@@ -1,128 +1,189 @@
-:root {
-  /* Cores principais - modo claro */
-  --bg-color: #ffffff;          /* Background geral */
-  --text-color: #333333;        /* Texto padrão */
-  --card-bg: #F4DBD2;           /* Cards de produtos */
-  --header-bg: #E39A81;         /* Header */
-  --footer-bg: #E39A81;         /* Footer */
-  --btn-gradient-start: #E39A81; /* Degradê botão */
-  --btn-gradient-end: #ECBCAC;
-}
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
 
-body.dark {
-  /* Cores principais - modo escuro */
-  --bg-color: #1a1a1a;
-  --text-color: #f1f1f1;
-  --card-bg: #2a2a2a;
-  --header-bg: #E39A81;        /* Mantendo identidade da paleta */
-  --footer-bg: #E39A81;
-  --btn-gradient-start: #E39A81;
-  --btn-gradient-end: #ECBCAC;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: var(--bg-color);
-  color: var(--text-color);
+  background-color: #0a0a0a;
+  color: #d5b1ac;
+  font-family: 'Georgia', serif;
   text-align: center;
-  transition: background 0.3s, color 0.3s;
+  padding: 20px;
 }
 
-/* Header */
-header {
-  background: var(--header-bg);
-  color: #fff;
-  padding: 2rem;
-  position: relative;
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  padding-bottom: 5rem;
+
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
 }
 
-header p {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
+.brand-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #d5b1ac;
 }
 
-/* Botão de alternar modo */
-.toggle-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: #fff;
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+.hero p {
+  margin-bottom: 15px;
+}
+
+.hero button {
+  background-color: #d5b1ac;
   border: none;
-  border-radius: 20px;
-  padding: 0.5rem 1rem;
+  padding: 8px 15px;
+  border-radius: 5px;
   cursor: pointer;
-  font-weight: bold;
+  color: #0a0a0a;
 }
 
-body.dark .toggle-btn {
-  background: #333;
-  color: #fff;
+.products {
+  margin-top: 50px;
 }
 
-/* Produtos */
-.produtos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  padding: 2rem;
+.products h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
-.produto {
-  background: var(--card-bg);
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s, background 0.3s;
+.products p {
+  margin-bottom: 20px;
 }
 
-.produto:hover {
-  transform: scale(1.03);
+.filters button {
+  font-family: Literata , serif;
+  background-color: transparent;
+  border: 1px solid #d5b1ac;
+  color: #d5b1ac;
+  margin: 0 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 0.9rem;
 }
 
-.produto img {
-  max-width: 100%;
-  border-radius: 10px;
+.filters button.active,
+.filters button:hover {
+  background-color: #d5b1ac;
+  color: #0a0a0a;
 }
 
-.produto h3 {
-  margin: 0.5rem 0;
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
 }
 
-/* Botões */
-.botoes {
-  margin: 2rem 0;
+.product-item {
+  max-width: 200px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  margin: 0.5rem;
-  border-radius: 30px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  background: linear-gradient(45deg, var(--btn-gradient-start), var(--btn-gradient-end));
-  transition: background 0.3s, transform 0.2s;
+.product-item img {
+  width: 100%;
+  border-radius: 6px;
 }
 
-.btn:hover {
-  transform: scale(1.05);
+.product-item h3 {
+  margin-top: 10px;
+  font-weight: 700;
 }
 
-.btn-insta {
-  background: linear-gradient(45deg, #E39A81, #ECBCAC);
+.product-item p {
+  font-size: 0.85rem;
+  color: #ccc;
 }
 
-/* Footer */
-footer {
-  background: var(--footer-bg);
-  color: #fff;
-  padding: 1rem;
-  margin-top: 2rem;
+.instagram {
+  margin-top: 80px;
+}
+
+.instagram h2 {
+  margin-bottom: 5px;
+  font-size: 1.8rem;
+}
+
+.instagram p {
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.insta-photos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.insta-photos img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.instagram button {
+  background-color: #d5b1ac;
+  border: none;
+  padding: 14px 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #0a0a0a;
+}
+
+.contact {
+  margin-top: 80px;
+}
+
+.contact h2 {
+  font-size: 2.1rem;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.contact button {
+  background-color: #25D366;
+  border: none;
+  padding: 15px 50px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.footer {
+  margin-top: 100px;
+  padding: 20px 0;
+  border-top: 1px solid #333;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo-footer {
+  width: 25px;
+  height: auto;
 }
