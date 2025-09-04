@@ -1,0 +1,128 @@
+:root {
+  /* Cores principais - modo claro */
+  --bg-color: #ffffff;          /* Background geral */
+  --text-color: #333333;        /* Texto padrão */
+  --card-bg: #F4DBD2;           /* Cards de produtos */
+  --header-bg: #E39A81;         /* Header */
+  --footer-bg: #E39A81;         /* Footer */
+  --btn-gradient-start: #E39A81; /* Degradê botão */
+  --btn-gradient-end: #ECBCAC;
+}
+
+body.dark {
+  /* Cores principais - modo escuro */
+  --bg-color: #1a1a1a;
+  --text-color: #f1f1f1;
+  --card-bg: #2a2a2a;
+  --header-bg: #E39A81;        /* Mantendo identidade da paleta */
+  --footer-bg: #E39A81;
+  --btn-gradient-start: #E39A81;
+  --btn-gradient-end: #ECBCAC;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+  background: var(--header-bg);
+  color: #fff;
+  padding: 2rem;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Botão de alternar modo */
+.toggle-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+body.dark .toggle-btn {
+  background: #333;
+  color: #fff;
+}
+
+/* Produtos */
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.produto {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, background 0.3s;
+}
+
+.produto:hover {
+  transform: scale(1.03);
+}
+
+.produto img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.produto h3 {
+  margin: 0.5rem 0;
+}
+
+/* Botões */
+.botoes {
+  margin: 2rem 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  background: linear-gradient(45deg, var(--btn-gradient-start), var(--btn-gradient-end));
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-insta {
+  background: linear-gradient(45deg, #E39A81, #ECBCAC);
+}
+
+/* Footer */
+footer {
+  background: var(--footer-bg);
+  color: #fff;
+  padding: 1rem;
+  margin-top: 2rem;
+}
